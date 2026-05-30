@@ -1,0 +1,163 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Utility classes for gradients */
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-purple-400 {
+  --tw-gradient-from: #a78bfa;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(167, 139, 250, 0));
+}
+
+.to-cyan-400 {
+  --tw-gradient-to: #22d3ee;
+}
+
+.from-purple-600 {
+  --tw-gradient-from: #7c3aed;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(124, 58, 237, 0));
+}
+
+.to-cyan-600 {
+  --tw-gradient-to: #0891b2;
+}
+
+.from-purple-700 {
+  --tw-gradient-from: #6d28d9;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(109, 40, 217, 0));
+}
+
+.to-cyan-700 {
+  --tw-gradient-to: #0e7490;
+}
+
+.from-purple-900 {
+  --tw-gradient-from: #4c1d95;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(76, 29, 149, 0));
+}
+
+.to-cyan-900 {
+  --tw-gradient-to: #164e63;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+/* Animation */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Additional animations for quantum effects */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-\[spin_8s_linear_infinite\] {
+  animation: spin 8s linear infinite;
+}
+
+.animate-\[spin_10s_linear_infinite\] {
+  animation: spin 10s linear infinite;
+}
+
+.animate-\[spin_12s_linear_infinite_reverse\] {
+  animation: spin-reverse 12s linear infinite;
+}
+
+.animate-\[spin_5s_linear_infinite\] {
+  animation: spin 5s linear infinite;
+}
