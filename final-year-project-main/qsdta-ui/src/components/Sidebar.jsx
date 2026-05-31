@@ -96,9 +96,20 @@ function Sidebar() {
         }`}
       >
         {/* Logo */}
-        <div className="p-4 border-b border-gray-800 flex items-center">
-          <AtomIcon className="h-8 w-8 text-cyan-400 flex-shrink-0" />
-          {!isCollapsed && <span className="ml-2 text-xl font-bold text-white">QuantumChat</span>}
+        <div className="p-4 border-b border-gray-800 flex items-center justify-between">
+          <div className="flex items-center">
+            <AtomIcon className="h-8 w-8 text-cyan-400 flex-shrink-0" />
+            {!isCollapsed && (
+              <span className="ml-2 text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                QuantumChat
+              </span>
+            )}
+          </div>
+          {!isCollapsed && (
+            <span className="text-[10px] bg-cyan-500/10 text-cyan-400 px-2 py-0.5 rounded-full border border-cyan-500/20 font-medium">
+              Secure
+            </span>
+          )}
         </div>
 
         {/* Navigation */}
