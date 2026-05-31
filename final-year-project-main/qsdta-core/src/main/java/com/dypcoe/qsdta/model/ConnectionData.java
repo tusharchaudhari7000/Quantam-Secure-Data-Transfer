@@ -16,10 +16,13 @@ public class ConnectionData {
     private UserConnection userConnection;
     @Column(name = "data_type", nullable = false)
     private String dataType;
-    @Column(name = "byte_data", nullable = false)
+    @Lob
+    @Column(name = "byte_data", columnDefinition = "LONGBLOB", nullable = false)
     private byte[] byteData;
     @Column(name = "owner", nullable = false)
     private String owner;
+    @Column(name = "file_name", nullable = true)
+    private String fileName;
 
     public void setByteData(byte[] byteData) {
         this.byteData = (byteData != null) ? byteData.clone() : new byte[0];
